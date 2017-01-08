@@ -9,6 +9,6 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 ## 用法
 
 1. 安装 ESLint
-2. 将本项目中 `.eslintrc` 复制保存到项目根目录中
+2. 将本项目中 `.eslintrc.yml` 复制保存到项目根目录中
 
 > 本配置文件尚在 **测试阶段**
