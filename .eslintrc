@@ -1,0 +1,380 @@
+# ESlint Config file
+# JKINFO 2017
+
+env:
+  browser: true
+  es6: true
+  node: true
+extends: 'eslint:recommended'
+rules:
+  
+  no-console: warn
+
+  # disallow negating the left operand of relational operators
+  no-unsafe-negation: error
+
+  # Disallow template literal placeholder syntax in regular strings
+  no-template-curly-in-string: error
+
+  valid-jsdoc: warn
+
+  # 禁止冗余的括号
+  no-extra-parens: warn
+
+  array-callback-return: error
+  
+  block-scoped-var: error
+  
+  curly:
+    - error
+    - multi-line
+  
+  default-case: error
+  
+  dot-location:
+    - error
+    - property
+  
+  eqeqeq: error
+  
+  guard-for-in: error
+  
+  no-alert: warn
+  
+  no-caller: error
+  
+  no-else-return: warn
+  
+  no-empty-function: warn
+
+  # 禁止 eval()
+  no-eval: 
+    - error
+    - allowIndirect: true # 只允许间接使用 eval
+  
+  # 禁止扩展原生类型
+  no-extend-native: error
+
+  # 禁止不必要的 .bind() 调用
+  no-extra-bind: error
+
+  # 禁用不必要的标签
+  no-extra-label: error
+
+  no-fallthrough: error
+
+  no-global-assign: error
+
+  no-implicit-coercion: error
+
+  # 禁止隐式的 eval()
+  no-implied-eval: error
+
+  # 禁用不必要的嵌套块
+  no-lone-blocks: error
+
+  # 禁止循环中存在函数
+  no-loop-func: error
+
+  # 禁止出现多个空格
+  no-multi-spaces: error
+
+  # 禁止多行字符串
+  no-multi-str: error
+
+  # 禁用Function构造函数
+  no-new-func: error
+
+  # 禁止原始包装实例
+  no-new-wrappers: error
+
+  # 禁止在非赋值或条件语句中使用 new 操作符
+  no-new: error
+
+  # 禁止在字符串字面量中使用八进制转义序列
+  no-octal-escape: error
+
+  # 禁止在返回语句中赋值
+  no-return-assign: error
+
+  # 禁用 Script URL
+  no-script-url: error
+
+  # 不允许使用逗号操作符
+  no-sequences: error
+
+  # 禁止自身比较
+  no-self-compare: error
+
+  # 限制可以被抛出的异常
+  no-throw-literal: error
+
+  # 禁止未使用过的表达式
+  no-unused-expressions: error
+
+  # 禁止没有必要的字符拼接
+  no-useless-concat: error
+
+  # 禁用不必要的转义
+  no-useless-escape: error
+
+  # 禁止使用void操作符
+  no-void: error
+
+  # Disallow redundant return statements
+  no-useless-return: error
+
+  # 禁用 with 语句
+  no-with: error
+
+  # 要求必须有基数
+  radix: error
+
+  # 要求将变量声明放在它们作用域的顶部
+  vars-on-top: error
+
+  # 需要把立即执行的函数包裹起来
+  wrap-iife: error
+
+  # 要求或者禁止Yoda条件
+  yoda: error
+
+  #== 变量 ==
+  # 不允许在 catch 语句中遮盖变量
+  no-catch-shadow: error
+
+  # 禁用与变量同名的标签
+  no-label-var: error
+
+  # 关键字不能被遮蔽
+  no-shadow-restricted-names: error
+
+  # 禁止变量声明覆盖外层作用域的变量
+  no-shadow: error
+
+  # 不允许初始化变量值为
+  no-undef-init: error
+
+  # 不允许使用undefined变量
+  no-undefined: error
+
+  # 禁止定义前使用
+  no-use-before-define: error
+
+
+  #== 风格 ==
+  # 禁止或强制在单行代码块中使用空格
+  block-spacing: error
+
+  # 大括号风格要求
+  brace-style: error
+
+  # 要求使用骆驼拼写法
+  camelcase: error
+
+  # 要求或禁止使用拖尾逗号
+  comma-dangle: error
+
+  # 强制在逗号周围使用空格
+  comma-spacing: error
+
+  # 逗号风格
+  comma-style: error
+
+  # 禁止或强制在计算属性中使用空格
+  computed-property-spacing: error
+
+  # 要求或禁止文件末尾保留一行空行
+  eol-last: error
+
+  # 强制使用一致的缩进
+  indent:
+    - error
+    - 4
+    - SwitchCase: 1
+
+  # require or disallow spacing between function identifiers and their invocations
+  func-call-spacing: error
+
+  # 要求或禁止命名的 function 表达式
+  func-names: warn
+
+  # 禁止使用指定的标识符
+  id-blacklist:
+    - warn
+    - data
+    - item
+    - time
+    - date
+    - callback
+    - cb
+
+  # 强制标识符的最大和最小长度
+  id-length:
+    - warn
+    - min: 2
+      max: 10
+      properties: never
+      exceptions:
+        - x
+        - y
+        - i
+        - j
+        - k
+
+  # 强制在对象字面量的键和值之间使用一致的空格
+  key-spacing: error
+
+  # 强制关键字周围空格的一致性
+  keyword-spacing: error
+
+  # 强制使用一致的换行符风格
+  linebreak-style:
+    - error
+    - unix
+  
+  # 强制注释周围有空行
+  lines-around-comment: error
+
+  # require or disallow newlines around directives
+  lines-around-directive: error
+
+  # 强制行的最大长度
+  max-len:
+    - error
+    - 100
+  
+  # 要求构造函数首字母大写
+  new-cap: error
+  
+  # 要求调用无参构造函数时带括号
+  new-parens: error
+  
+  # 要求或禁止变量声明语句后有一行空行
+  newline-after-var: error
+  
+  # 要求 return 语句之前有一空行
+  newline-before-return: error
+  
+  # 要求方法链中每个调用都有一个换行符
+  newline-per-chained-call: error
+  
+  # 禁止使用 Array 构造函数
+  no-array-constructor: error
+  
+  # 禁止使用按位操作符
+  no-bitwise: warn
+  
+  # 禁用 continue
+  no-continue: error
+  
+  # 禁止 if 语句作为唯一语句出现在 else 语句块中
+  no-lonely-if: error
+  
+  # 禁止混合使用不同的操作符
+  no-mixed-operators: error
+  
+  # 禁止出现多行空行
+  no-multiple-empty-lines: error
+  
+  # 禁用否定表达式
+  no-negated-condition: warn
+  
+  # 禁止使用嵌套的三元表达式
+  no-nested-ternary: error
+  
+  # 禁止使用 Object 构造函数
+  no-new-object: error
+  
+  # 禁止使用一元操作符 ++ 和 --
+  no-plusplus:
+    - error
+    - allowForLoopAfterthoughts: true
+  
+  # Disallow tabs in file
+  no-tabs: error
+  
+  # 禁用行尾空白
+  no-trailing-spaces: error
+  
+  # 禁止可以表达为更简单结构的三元操作符
+  no-unneeded-ternary: error
+  
+  # 禁止属性前有空白
+  no-whitespace-before-property: error
+  
+  # 强制在花括号内使用一致的换行符
+  object-curly-newline: error
+  
+  # 强制在花括号中使用一致的空格
+  object-curly-spacing: error
+  
+  # 强制将对象的属性放在不同的行上
+  object-property-newline:
+    - error
+    - allowMultiplePropertiesPerLine: true
+  
+  # 要求或禁止在变量声明周围换行
+  one-var-declaration-per-line: error
+  
+  # 强制函数中的变量在一起声明或分开声明
+  one-var:
+    - error
+    - never
+  
+  # 要求或禁止尽可能地简化赋值操作
+  operator-assignment: error
+  
+  # 要求或禁止块内填充
+  padded-blocks:
+    - error
+    - never
+  
+  # 要求对象字面量属性名称使用引号
+  quote-props:
+    - error
+    - as-needed
+
+  # 强制字符串使用单引号
+  quotes:
+    - error
+    - single
+  
+  # 要求使用分号
+  semi:
+    - error
+    - always
+
+  # 要求使用 JSDoc 注释
+  require-jsdoc: warn
+  
+  # 强制分号前后有空格
+  semi-spacing: error
+  
+  # 要求或禁止语句块之前的空格
+  space-before-blocks: error
+  
+  # 要求或禁止函数圆括号之前有一个空格
+  space-before-function-paren:
+    - error
+    - anonymous: always
+      named: never
+      asyncArrow: always
+  
+  # 禁止圆括号内的空格
+  space-in-parens:
+    - error
+    - never
+  
+  # 要求中缀操作符周围有空格
+  space-infix-ops: error
+  
+  # 要求或禁止在一元操作符之前或之后存在空格
+  space-unary-ops: error
+  
+  # 要求或禁止在注释前有空白 (space 或 tab)
+  spaced-comment: error
+  
+  # 要求或禁止使用 Unicode 字节顺序标记 (BOM)
+  unicode-bom: error
+

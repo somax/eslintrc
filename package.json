@@ -1,0 +1,18 @@
+{
+  "name": "eslintrc",
+  "version": "0.1.0",
+  "description": "公司内部统一的 ESLint 配置文件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.project-y.com:mxj/eslintrc.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "MaXiaojun <somaxj@163.com>",
+  "license": "ISC"
+}
